@@ -2,6 +2,7 @@ const quietBtn = document.getElementById("quiet-btn");
 const loudBtn = document.getElementById("loud-btn");
 const sarcBtn = document.getElementById("sarc-btn");
 const content = document.getElementById("patrick");
+const text = content.innerText;
 
 quietBtn.addEventListener('click', quietText);
 loudBtn.addEventListener('click', loudText);
@@ -9,33 +10,32 @@ sarcBtn.addEventListener('click', sarcText);
 
 function quietText() {
     console.log("Quiet");
-    content.innerText = content.innerText.toLowerCase();
+    content.innerText = text.toLowerCase();
 }
 
 function loudText() {
     console.log("Loud");
-    content.innerText = content.innerText.toUpperCase();
+    content.innerText = text.toUpperCase();
 }
 
 function sarcText() {
     console.log("Sarcastic");
-    let origStr = content.innerText;
     let newStr = "";
     let upper = false;
-    for (i=0;i<origStr.length;i++) {
+    for (i=0;i<text.length;i++) {
         let char;
-        if ("abcdefghijklmnopqrstuvwxyz".includes(origStr[i])) {
+        if ("abcdefghijklmnopqrstuvwxyz".includes(text[i])) {
             if (upper === false) {
-                char = origStr[i].toLowerCase();
+                char = text[i].toLowerCase();
                 upper = true;
             }
             else {
-                char = origStr[i].toUpperCase();
+                char = text[i].toUpperCase();
                 upper = false;
             }
         }
         else {
-            char = origStr[i]
+            char = text[i]
         }
         newStr += char;
     }
