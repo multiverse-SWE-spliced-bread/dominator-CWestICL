@@ -5,7 +5,7 @@ for (i=0;i<99;i++) {
 const blocks = document.querySelectorAll(".red-block");
 
 blocks.forEach(block => {
-    block.addEventListener('mouseover', function hideBlock() {
-        block.style.visibility = "hidden";
+    block.addEventListener('mouseover', function deleteBlock() {
+        block.remove();
     });
 });
