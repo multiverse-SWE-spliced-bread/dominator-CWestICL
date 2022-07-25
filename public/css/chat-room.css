@@ -1,0 +1,20 @@
+body {
+    background-color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+    text-align: center;
+}
+p {
+    background-color: blue;
+    color: white;
+    max-width: 300px;
+    overflow: auto;
+    word-wrap: break-word;
+    padding: 10px;
+    border-radius: 5px;
+}
+#chat-input {
+    display: grid;
+    grid-template-columns: 1fr minmax(150px, 15%);
+}
