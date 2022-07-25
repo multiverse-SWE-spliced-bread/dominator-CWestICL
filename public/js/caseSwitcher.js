@@ -24,14 +24,14 @@ function sarcText() {
     let upper = false;
     for (i=0;i<text.length;i++) {
         let char;
-        if ("abcdefghijklmnopqrstuvwxyz".includes(text[i])) {
-            if (upper === false) {
-                char = text[i].toLowerCase();
-                upper = true;
-            }
-            else {
+        if ("abcdefghijklmnopqrstuvwxyz".includes(text[i].toLowerCase())) {
+            if (upper) {
                 char = text[i].toUpperCase();
                 upper = false;
+            }
+            else {
+                char = text[i].toLowerCase();
+                upper = true;
             }
         }
         else {
